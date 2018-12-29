@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.93]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+\firstname{Daan} % Your first name
+\familyname{de Graaf} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+%\title{Curriculum Vitae}
+\address{Vestdijk 31R}{Eindhoven, Netherlands 5611CA}
+\mobile{(+31) 6 232 571 62}
+%\phone{(000) 111 1112}
+%\fax{(000) 111 1113}
+\email{daandegraaf9@gmail.com}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is %the url for the clickable link, the second argument is the url displayed in the %template - this allows special characters to be displayed such as the tilde in this %example
+\extrainfo{Github: \href{https://github.com/wildarch}{wildarch}}
+%\photo[70pt][0.4pt]{picture} % The first bracket is the picture height, the second is %the thickness of the frame around the picture (0pt for no frame)
+
+
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2009--2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{Secondary education in preparation of academic studies, including the study of ancient Greek and advanced calculus. Received award for highest exam grade (10/10 for mathematics).}
+
+\cventry{2015--2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Netherlands}{Computer Science bachelor with specialisations in security, artificial intelligence and computer architecture. GPA: 8.55/10.0 (Cum Laude)}
+
+
+%---------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Honors}
+\cventry{2016--2018}{Honors Program High Tech Systems}{TU Eindhoven}{Eindhoven}{\url{fireflyeindhoven.nl}}{Special program for the top 100 students of the university to take on a extra project next to their studies. Our team firefly strives to create a captivating show combining music and light effects with drones. Received the rare "Excellent" distinction for my efforts (highest awarded). I work mostly on visually tracking drones and firmware deployment orchestration.}
+
+\section{Work}
+\cventry{2015--2018}{Main software developer}{BE-Combi B.V. }{Vuren}{}{Develop and maintain custom applications for project planning and time registration, Focussing on ease of use and reliability.}
+
+\section{Board experience}
+\cventry{2016--2017}{President}{AEGEE-Eindhoven}{Eindhoven}{\url{aegee.org}}{Represent the about 160 members of the local AEGEE antenna both locally and internationally. Travelled to Brussels (Belgium), Bucharest (Romania), Chisinau (Moldova) and Baku (Azerbaijan) to meet locals and experience their culture. Main coordinator for all activities during the Introduction week in both 2016 and 2017, and coordinator for the move to a new building.}
+
+\cventry{2017--2018}{Chairman}{Scala}{Eindhoven}{}{Represent a collective of 9 cultural student associations with over 1000 members in total. Tasks include organising large events, policy making and negotiating board grant agreements.}
+
+\section{Notable Projects}
+\cventry{March 2018}{Zonde project}{TU Eindhoven}{Eindhoven}{10/10 score (highest in class)}{Developed a proof-of-concept application on the ESP32 platform to capture probe requests and combine this data with a geolocation database to obtain valuable information about people (home location, workplace) and expose the security flaws in the IEEE 802.11 protocol. Reverse engineered the binary wifi firmware to enable arbitrary management frame injection and perform a deauthentication attack.}
+
+\cventry{2016--2018}{Manpower}{BE-Combi B.V.}{Vuren}{}{Developed and maintain the application used daily by all employees to register what projects they work on and for how many hours. Includes automatic upload to accounting software Exact Online. Backend in Rust (Rocket framework) with Postgresql, Frontend in Elm.}
+
+\cventry{2018}{Grobner basis solver in CUDA}{Avular}{Eindhoven}{}{Porting an algorithm in Matlab involving a Grobner basis solver (details are confidential) to C++/CUDA to run closed-loop on the Jetson TK1.}
+
+\section{Computer Skills}
+\cvitem{Languages}{Rust, Java, Elm, C/C++, Matlab, Python, JavaScript, Kotlin, Verilog, SQL }
+\cvitem{Competences}{Bare metal/Embedded software, Linux server administration, Functional programming, Frontend and Backend web development, Control theory}
+\cvitem{Technologies}{Linux, Simulink, CUDA, ESP-IDF, Docker, Rocket web framework, React, Meteor, PostgreSQL, Vimba (GigE), Django, \LaTeX}
+%----------------------------------------------------------------------------------------
+%	LANGUAGES SECTION
+%----------------------------------------------------------------------------------------
+\section{Languages}
+\begin{small}
+\hspace{2.4cm} 
+\textbf{Dutch:} Native speaker
+\hspace{0.4cm}
+\textbf{English:} Advanced
+\end{small}
+
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+%\bigskip
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{HR Departmnet}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+%\lipsum[1-3] % Dummy text
+
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
