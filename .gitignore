@@ -1,0 +1,9 @@
+# Latex
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+
+# Bazel
+/bazel-*
