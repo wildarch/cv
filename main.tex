@@ -23,7 +23,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[10pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\documentclass[10pt,a4paper,sans,colorlinks,linkcolor=color1,urlcolor=color1]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 \moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
@@ -31,6 +31,7 @@
 \usepackage[scale=0.93]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION SECTION
@@ -46,7 +47,10 @@
 %\fax{(000) 111 1113}
 \email{daandegraaf9@gmail.com}
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is %the url for the clickable link, the second argument is the url displayed in the %template - this allows special characters to be displayed such as the tilde in this %example
-\extrainfo{Github: \href{https://github.com/wildarch}{wildarch}}
+\extrainfo{
+    Github: \href{https://github.com/wildarch}{wildarch},
+    LinkedIn: \href{https://www.linkedin.com/in/daan-de-graaf}{daan-de-graaf}
+}
 \photo[70pt][0.4pt]{profile} % The first bracket is the picture height, the second is %the thickness of the frame around the picture (0pt for no frame)
 
 
@@ -63,14 +67,15 @@
 \cventry{09/2021 -- \textit{08/2023 (expected)}}{Computer Engineering MSc}{Delft University of Technology}{Delft}{\textit{expected Cum laude}}{
     Core courses on Computer Architecture, Processor Design and Heterogeneous Computing.
     Specialization courses in Compiler Construction, Distributed \& Concurrent Program Analysis, and Data-Intensive Systems Engineering.
+    Some courses in Databases and Functional Programming taken at TU Eindhoven.
     GPA: 9.0/10
 }
 \cventry{09/2015 -- 07/2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Cum laude}{
-    Computer Science bachelor with specializations in Security, Artificial Intelligence and Computer Architecture. GPA: 8.55/10.0
+    Computer Science bachelor with electives in Security, Artificial Intelligence and Computer Architecture. GPA: 8.55/10.0
 }
 
 \cventry{09/2009 -- 06/2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{
-    Secondary education in preparation for academic studies, including the study of ancient Greek and advanced calculus.
+    Secondary education in preparation for academic studies, including ancient Greek and advanced calculus. GPA: 8.36/10.0
 }
 
 %---------------------------------------------------------------------------------------
@@ -83,14 +88,19 @@
     In response to concerns about exceeding our time budget, I spearheaded an initiative to speed up our pipeline, and reduced execution time six-fold.
     Next to my core responsibilities, I have also taught introductory classes to the \href{https://www.rust-lang.org/}{Rust programming language} and contributed to the \href{https://v8.dev/}{V8 JavaScript compiler} that powers Google Chrome.
 }
-\cventry{09/2018 -- 05/2019}{Designer}{Prodrive Technologies B.V.}{Eindhoven}{\url{prodrive-technologies.com}}{
+\cventry{09/2018 -- 05/2019}{Designer}{Prodrive Technologies B.V.}{Eindhoven}{\href{https://prodrive-technologies.com}{prodrive-technologies.com}}{
     Embedded Software Designer for 2 months.
     Switched to the newly created DevInfra team to assess the viability of the Rust programming language for use at Prodrive and promote it.
     Developed various applications in the Embedded and Networking domains.
 }
 
 \section{Notable Projects}
-\cventry{11/2022 -- 02/2023}{Superg}{TU Eindhoven}{Eindhoven}{\url{github.com/wildarch/superg}}{
+\cventry{02/2023 -- \textit{08/2023 (expected)}}{MSc Thesis: Efficient Processing of User-Provided Graph Algorithms in a Graph Database}{TU Delft / \mbox{TU Eindhoven}}{Delft}{}{
+    In this joint project between TU Delft and TU Eindhoven, I am researching how to design a user-friendly programming language for expressing graph algorithms that can be compiled and executed efficiently inside the \href{https://avantgraph.io/}{AvantGraph Database}.
+    I am currently developing the compiler for this language, which will optimize and transform imperative programs into a query operator graph.
+    My thesis project will allow the embedding of graph algorithms directly into graph queries, which can then be holistically optimized and executed.
+}
+\cventry{11/2022 -- 02/2023}{Superg}{TU Eindhoven}{Eindhoven}{\href{https://github.com/wildarch/superg}{github.com/wildarch/superg}}{
     Built modern equivalents of the \href{http://miranda.org.uk/}{Miranda} and \href{https://users.ece.cmu.edu/~koopman/tigre/index.html}{TIGRE} execution engines for functional programming languages.
     Thanks to the use of a recently-proposed compilation algorithm, the worst-case performance is exponentially better than previous Combinator Reduction Engines.
     We show that while TIGRE outperformed Miranda significantly at the time of publication, on modern x86 CPUs it suffers from frequent cache invalidation, and is not a good choice anymore.
@@ -98,13 +108,13 @@
     Currently investigating a venue for publication.
 }
 
-\cventry{04/2022 -- 02/2023}{ByzzFuzz}{TU Delft}{Delft}{\url{doi.org/10.1145/3586053}}{
+\cventry{04/2022 -- 02/2023}{ByzzFuzz}{TU Delft}{Delft}{\href{https://doi.org/10.1145/3586053}{doi.org/10.1145/3586053}}{
     Designed a fuzz testing harness for the Tendermint blockchain.
     I demonstrated a mismatch between the consensus protocol and message delivery subsystem, which can cause clusters to deadlock if certain messages are dropped.
     Paper accepted for \href{https://2023.splashcon.org/details/splash-2023-oopsla/27/Randomized-Testing-of-Byzantine-Fault-Tolerant-Algorithms}{OOPSLA 2023}.
 }
 
-\cventry{02/2022 -- 04/2022}{Compiled Selection Predicates in AvantGraph Database}{TU Eindhoven}{Eindhoven}{}{
+\cventry{02/2022 -- 04/2022}{Compiled Selection Predicates in the AvantGraph Database}{TU Eindhoven}{Eindhoven}{}{
     Designed a Just-in-time compilation scheme for the AvantGraph database that combines performance with maintainability.
     The JIT compiler, based on LLVM, accepts ordinary C++ functions and applies runtime specialization to reduce branching and pointer indirection.
     I implemented selection predicate compilation using the JIT and demonstrated performance improvements in multiple queries from the \href{https://github.com/ldbc/lsqb}{LSQB} benchmark.
@@ -118,6 +128,8 @@
     At our industry partner Avular, I ported their position tracking system from Matlab to C++ and CUDA to run it locally on the drone, achieving a 4x speedup.
     Received the rare "Excellent" distinction for my efforts (highest awarded).
 }
+
+\newpage
 
 \section{Competences}
 \cvitem{Languages}{C/C++, Rust, Java, SQL, Python, \LaTeX, VHDL}
@@ -134,15 +146,14 @@
 }
 
 \cvitem{Technologies}{
-    \href{https://kernel.org/}{Linux},
-    \href{https://llvm.org/}{LLVM},
-    \href{https://www.antlr.org/}{ANTLR},
-    \href{https://www.vim.org/}{Vim},
-    \href{https://bazel.build/}{Bazel},
-    \href{https://developer.nvidia.com/cuda-toolkit}{NVIDIA CUDA},
-    \href{https://www.docker.com/}{Docker}
+    Linux,
+    LLVM,
+    ANTLR,
+    Vim,
+    Bazel,
+    NVIDIA CUDA,
+    Docker
 }
-\newpage
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
@@ -156,12 +167,12 @@
 \end{small}
 
 \section{Board experience}
-\cventry{06/2017 -- 09/2018}{Chairman}{Scala}{Eindhoven}{\url{studentencultuur.nl}}{
+\cventry{06/2017 -- 09/2018}{Chairman}{Scala}{Eindhoven}{\href{https://studentencultuur.nl}{studentencultuur.nl}}{
     Represent a collective of 9 cultural student associations with over 1000 members.
     Tasks include organizing large events, policy-making and negotiating board grant agreements.
 }
 
-\cventry{09/2016 11/2017}{President}{AEGEE-Eindhoven}{Eindhoven}{\url{aegee.org}}{
+\cventry{09/2016 11/2017}{President}{AEGEE-Eindhoven}{Eindhoven}{\href{https://aegee.org}{aegee.org}}{
     Represent the local AEGEE antenna both locally and internationally.
     Main event organizer, and coordinator for the move to a new building.
 }
@@ -179,11 +190,11 @@
 \cvitem{Cooking}{
     I enjoy trying out new recipes and learning the science behind cooking to make better food.
     In particular, I am interested in Asian cuisine and bread-making.
-    My collection of recipes is available at \url{https://github.com/wildarch/mono/tree/main/recipes/collections}.
+    My collection of recipes is available on \href{https://github.com/wildarch/mono/tree/main/recipes/collections}{GitHub}.
 }
 
 \cvitem{Climbing}{
-    I like bouldering and top-rope climbing. I hope to try outdoor climbing in the future.
+    I like indoor bouldering and top-rope climbing. I hope to try outdoor climbing in the future.
 }
 
 \end{document}
