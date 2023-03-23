@@ -40,7 +40,7 @@
 
 % All information in this block is optional, comment out any lines you don't need
 %\title{Curriculum Vitae}
-\address{Vestdijk 31R}{Eindhoven, Netherlands 5611 CA}
+\address{Tongelresestraat 92A}{Eindhoven, Netherlands 5613 DN}
 \mobile{(+31) 6 232 571 62}
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
@@ -60,37 +60,78 @@
 %----------------------------------------------------------------------------------------
 
 \section{Education}
-\cventry{09/2015 -- 07/2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Cum laude}{Computer Science bachelor with specialisations in security, artificial intelligence and computer architecture. GPA: 8.55/10.0}
+\cventry{09/2021 -- \textit{08/2023 (expected)}}{Computer Engineering MSc}{Delft University of Technology}{Delft}{\textit{expected Cum laude}}{
+    Core courses on Computer Architecture, Processor Design and Heterogeneous Computing.
+    Specialisation courses in Compiler Construction, Distributed \& Concurrent program analysis, Data-Intensive Systems Engineering.
+    GPA: 9.0/10
+}
+\cventry{09/2015 -- 07/2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Cum laude}{
+    Computer Science bachelor with specialisations in Security, Artificial Intelligence and Computer Architecture. GPA: 8.55/10.0
+}
 
-\cventry{09/2009 -- 06/2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{Secondary education in preparation of academic studies, including the study of ancient Greek and advanced calculus. Received award for highest exam grade (10/10 for mathematics).}
+\cventry{09/2009 -- 06/2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{
+    Secondary education in preparation of academic studies, including the study of ancient Greek and advanced calculus.
+    Received award for highest exam grade (10/10 for mathematics).
+}
 
 %---------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-\section{Honors}
-\cventry{06/2016 -- 09/2018}{Honors Program High Tech Systems}{TU Eindhoven}{Eindhoven}{\url{fireflyeindhoven.nl}}{Special program for the top 100 students of the university to take on a extra project next to their studies. Our team firefly strives to create a captivating show combining music and light effects with drones. Received the rare "Excellent" distinction for my efforts (highest awarded). My main focus was on visually tracking drones and firmware deployment orchestration.}
-
 \section{Work}
-\cventry{09/2018 -- present}{Designer}{Prodrive Technologies B.V.}{Eindhoven}{\url{prodrive-technologies.com}}{Embedded Software Designer for 2 months. Switched to newly created DevInfra team to assess the viability of the Rust programming language for use at Prodrive and promote it. Developed various applications in the Embedded and Networking domains. Currently working on improving these applications, writing a paper and giving talks about experiences.}
-
-\cventry{09/2015 -- present}{Main software developer}{BE-Combi B.V. }{Vuren}{}{Develop and maintain custom applications for project planning and time registration, Focussing on ease of use and reliability.}
-\section{Board experience}
-\cventry{06/2017 -- 09/2018}{Chairman}{Scala}{Eindhoven}{}{Represent a collective of 9 cultural student associations with over 1000 members in total. Tasks include organising large events, policy making and negotiating board grant agreements.}
-
-\cventry{09/2016 11/2017}{President}{AEGEE-Eindhoven}{Eindhoven}{\url{aegee.org}}{Represent the about 160 members of the local AEGEE antenna both locally and internationally. Travelled to Brussels (Belgium), Bucharest (Romania), Chisinau (Moldova) and Baku (Azerbaijan) to meet locals and experience their culture. Main coordinator for all activities during the Introduction week in both 2016 and 2017, and coordinator for the move to a new building.}
+\cventry{09/2018 -- 05/2019}{Designer}{Prodrive Technologies B.V.}{Eindhoven}{\url{prodrive-technologies.com}}{
+    Embedded Software Designer for 2 months.
+    Switched to newly created DevInfra team to assess the viability of the Rust programming language for use at Prodrive and promote it.
+    Developed various applications in the Embedded and Networking domains.
+}
 
 \section{Notable Projects}
-\cventry{03/2018}{Zonde project}{TU Eindhoven}{Eindhoven}{10/10 score (highest in class)}{Developed a proof-of-concept application on the ESP32 platform to capture probe requests and combine this data with a geolocation database to obtain valuable information about people (home location, workplace) and expose the security flaws in the IEEE 802.11 protocol. Reverse engineered the binary wifi firmware to enable arbitrary management frame injection and perform a deauthentication attack.}
+\cventry{02/2022 -- 04/2022}{Compiled Selection Predicates in AvantGraph Database}{TU Eindhoven}{Eindhoven}{}{
+    Designed a Just-in-time compilation scheme for the AvantGraph database that combines performance with maintainability.
+    The JIT compiler, based on LLVM, accepts ordinary C++ functions and specializes them at runtime to reduce branching and pointer indirection.
+    I implemented compilation of selection predicates using the JIT, and demonstrated performance improvements in multiple queries from the \href{https://github.com/ldbc/lsqb}{LSQB} benchmark.
+    Final course grade 9/10.
+}
 
-\cventry{02/2018 - 09/2018}{Grobner basis solver in CUDA}{Avular}{Eindhoven}{}{Porting an algorithm in Matlab involving a Grobner basis solver (details are confidential) to C++/CUDA to run closed-loop on the Jetson TK1. The port achieved a 20x performance improvement, making the technology commercially viable (currently being integrated into a product).}
+\cventry{04/2022 -- 02/2023}{ByzzFuzz}{TU Delft}{Delft}{\url{https://doi.org/10.1145/3586053}}{
+    Designed a fuzz testing harness for a the Tendermint blockchain.
+    I demonstrated a mismatch between the concensus protocol and message delivery subsystem, which can cause cluster to deadlock if certain messages are dropped.
+    Paper accepted for \href{https://2023.splashcon.org/details/splash-2023-oopsla/27/Randomized-Testing-of-Byzantine-Fault-Tolerant-Algorithms}{OOPSLA 2023}.
+}
 
-\cventry{01/2016 -- present}{Manpower}{BE-Combi B.V.}{Vuren}{}{Developed and maintain the application used daily by all employees to register what projects they work on and for how many hours. Includes automatic upload to accounting software Exact Online. Backend in Rust (Rocket framework) with Postgresql, Frontend in Elm.}
+\cventry{11/2022 -- 02/2023}{Superg}{TU Eindhoven}{Eindhoven}{\url{https://github.com/wildarch/superg}}{
+    Built modern equivalents of the \href{http://miranda.org.uk/}{Miranda} and \href{https://users.ece.cmu.edu/~koopman/tigre/index.html}{TIGRE} execution engines for functional programming languages.
+    Thanks to the use of a recently-proposed compilation algorithm, the worst case performance is exponentially better than previous Combinator Reduction Engines.
+    We show that while TIGRE outperformed Miranda significantly at the time of publication, on modern x86 CPUs it suffers from frequent cache invalidation, and is not a good choice anymore.
+    Final course grade 10/10.
+    Currently investigating a venue for publication.
+}
 
-\section{Software Skills}
-\cvitem{Languages}{Rust, Java, Elm, C/C++, Python, JavaScript, SQL, Kotlin, Verilog}
-\cvitem{Competences}{Bare metal/Embedded, Linux server administration, Functional programming, Full stack web development, CI/CD, Computer Architecture, Virtualization, Control Theory}
-\cvitem{Technologies}{Linux, Rocket web framework, Actix actor framework, Docker, CUDA, Bazel, React, PostgreSQL, \LaTeX}
+\section{Honors}
+\cventry{06/2016 -- 09/2018}{Honors Program High Tech Systems}{TU Eindhoven}{Eindhoven}{}{
+    Special program for the top 100 students of the university to take on a extra project next to their studies.
+    Built a low-latency drone position-tracking system based on image recognition.
+    At our industry partner Avular, I ported their position tracking system from Matlab to C++ and Cuda to run it locally on the drone, achieving a 4x speedup.
+    Received the rare "Excellent" distinction for my efforts (highest awarded).
+}
 
+\section{Competences}
+\cvitem{Languages}{C/C++, Rust, Java, SQL, VHDL, Python}
+\cvitem{Tech. skills}{
+    Compiler design,
+    Engineering data-intensive systems,
+    Performance engineering,
+    Large-scale software development
+}
+\cvitem{Soft skills}{
+    Academic writing,
+    Public speaking,
+    Project management
+}
+
+%Bare metal/Embedded, Linux server administration, Functional programming, Full stack web development, CI/CD, Computer Architecture, Virtualization, Control Theory}
+\cvitem{Technologies}{
+    Linux,
+    LLVM}
 \newpage
 
 %----------------------------------------------------------------------------------------
@@ -98,10 +139,10 @@
 %----------------------------------------------------------------------------------------
 \section{Languages}
 \begin{small}
-\hspace{2.4cm} 
-\textbf{Dutch:} Native speaker
-\hspace{0.4cm}
-\textbf{English:} Advanced
+    \hspace{2.4cm}
+    \textbf{Dutch:} Native speaker
+    \hspace{0.4cm}
+    \textbf{English:} Advanced
 \end{small}
 
 
@@ -109,8 +150,14 @@
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 \section{Interests}
-\cvitem{Travelling}{I love to step outside of my confort zone and try new things. Not only does this drive me to experiment with new technologies and unfamiliar programming languages, it is also a motivation to travel to countries that are very different from the Netherlands, such as Azerbaijan, and embrace different cultures. This summer my thirst for culture shocks will take me on a three month solo trip to Asia from Hong Kong to Malaysia.} 
+\cvitem{Travelling}{
+    I love to step outside of my comfort zone and try new things.
+    Not only does this drive me to experiment with new technologies and unfamiliar programming languages, it is also a motivation to travel to countries that are very different from the Netherlands, such as Azerbaijan, and embrace different cultures.
+    This summer my thirst for culture shocks will take me on a three month solo trip to Asia from Hong Kong to Malaysia.
+}
 
-\cvitem{Technology}{Technology never ceases to intrigue me. While I specialize in Software, I also take a great interest in the Electrical and Mechanical engieering fields. My ideal project combines all three of these disciplines.}
+\cvitem{Cooking}{}
+
+\cvitem{Bouldering}{}
 
 \end{document}

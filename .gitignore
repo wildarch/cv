@@ -7,3 +7,7 @@
 
 # Bazel
 /bazel-*
+
+# Latexmk
+*.fls
+*.fdb_latexmk
