@@ -3,7 +3,7 @@
         {
             "language": "latex",
             "scheme": "file",
-            "pattern": "main.tex"
+            "pattern": "cv.tex"
         }
     ]
 }
