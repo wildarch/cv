@@ -47,8 +47,10 @@
 %\fax{(000) 111 1113}
 \email{daandegraaf9@gmail.com}
 %\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is %the url for the clickable link, the second argument is the url displayed in the %template - this allows special characters to be displayed such as the tilde in this %example
+%\homepage{https://wildarch.dev}{wildarch.dev}
 \extrainfo{
-    Github: \href{https://github.com/wildarch}{wildarch},
+    Homepage: \href{https://wildarch.dev}{wildarch.dev}\\
+    Github: \href{https://github.com/wildarch}{wildarch}\\
     LinkedIn: \href{https://www.linkedin.com/in/daan-de-graaf}{daan-de-graaf}
 }
 \photo[70pt][0.4pt]{profile} % The first bracket is the picture height, the second is %the thickness of the frame around the picture (0pt for no frame)
@@ -64,7 +66,7 @@
 %----------------------------------------------------------------------------------------
 
 \section{Education}
-\cventry{09/2021 -- \textit{08/2023 (expected)}}{Computer Engineering MSc}{Delft University of Technology}{Delft}{\textit{expected Cum laude}}{
+\cventry{09/2021 -- 08/2023}{Computer Engineering MSc}{Delft University of Technology}{Delft}{\textit{expected Cum laude}}{
     Core courses on Computer Architecture, Processor Design and Heterogeneous Computing.
     Specialization courses in Compiler Construction, Distributed \& Concurrent Program Analysis, and Data-Intensive Systems Engineering.
     Some courses in Databases and Functional Programming taken at TU Eindhoven.
@@ -82,6 +84,11 @@
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \section{Work}
+\cventry{06/2023 -- present}{PhD Candidate on Programmability of Graph Databases}{Eindhoven University of Technology}{Eindhoven}{\href{https://research.tue.nl/en/persons/daan-de-graaf}{https://research.tue.nl/en/persons/daan-de-graaf}}{
+    My research currently focuses on support for user-defined graph algorithms in graph databases.
+    I am developing Graphalg, a domain-specific language for writing graph algorithms in the language of linear algebra that is both easy to use and highly optimizable.
+    Fully integrated into the AvantGraph database, it enables graph databases to become platforms for efficient large-scale data analysis.
+}
 \cventry{09/2019 -- 07/2021}{Software Engineer}{Google LLC}{London}{}{
     As part of the Display Ads Monetization team, developed the pipeline for calculation and disbursement of advertising revenue to AdSense and YouTube partners.
     The system I personally designed and built processed well over 1 billion USD monthly, and was a mission-critical part of the pipeline.
@@ -94,23 +101,22 @@
 }
 
 \section{Notable Projects}
-\cventry{02/2023 -- \textit{08/2023 (expected)}}{MSc Thesis: Efficient Processing of User-Provided Graph Algorithms in a Graph Database}{TU Delft / \mbox{TU Eindhoven}}{Delft}{}{
-    In this joint project between TU Delft and TU Eindhoven, I am researching how to design a user-friendly programming language for expressing graph algorithms that can be compiled and executed efficiently inside the \href{https://avantgraph.io/}{AvantGraph Database}.
-    I am currently developing the compiler for this language, which will optimize and transform imperative programs into a query operator graph.
-    My thesis project will allow the embedding of graph algorithms directly into graph queries, which can then be holistically optimized and executed.
+\cventry{02/2023 -- 08/2023}{MSc Thesis: Efficient Processing of User-Provided Graph Algorithms in a Graph Database}{TU Delft / \mbox{TU Eindhoven}}{Delft}{\href{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}}{
+    In this joint project between TU Delft and TU Eindhoven, I researched how to design a user-friendly programming language for expressing graph algorithms that can be compiled and executed efficiently inside the \href{https://avantgraph.io/}{AvantGraph Database}.
+    I developed the compiler for this language, which optimizes and transforms imperative programs into a query operator graph.
+    My thesis project allows the embedding of graph algorithms directly into graph queries, which can then be holistically optimized and executed.
 }
 \cventry{11/2022 -- 02/2023}{Superg}{TU Eindhoven}{Eindhoven}{\href{https://github.com/wildarch/superg}{github.com/wildarch/superg}}{
     Built modern equivalents of the \href{http://miranda.org.uk/}{Miranda} and \href{https://users.ece.cmu.edu/~koopman/tigre/index.html}{TIGRE} execution engines for functional programming languages.
     Thanks to the use of a recently-proposed compilation algorithm, the worst-case performance is exponentially better than previous Combinator Reduction Engines.
     We show that while TIGRE outperformed Miranda significantly at the time of publication, on modern x86 CPUs it suffers from frequent cache invalidation, and is not a good choice anymore.
     Final course grade 10/10.
-    Currently investigating a venue for publication.
 }
 
 \cventry{04/2022 -- 02/2023}{ByzzFuzz}{TU Delft}{Delft}{\href{https://doi.org/10.1145/3586053}{doi.org/10.1145/3586053}}{
     Designed a fuzz testing harness for the Tendermint blockchain.
     I demonstrated a mismatch between the consensus protocol and message delivery subsystem, which can cause clusters to deadlock if certain messages are dropped.
-    Paper accepted for \href{https://2023.splashcon.org/details/splash-2023-oopsla/27/Randomized-Testing-of-Byzantine-Fault-Tolerant-Algorithms}{OOPSLA 2023}.
+    Our work received the ACM SIGPLAN Distinguished Paper award at \href{https://2023.splashcon.org/details/splash-2023-oopsla/27/Randomized-Testing-of-Byzantine-Fault-Tolerant-Algorithms}{OOPSLA 2023}.
 }
 
 \cventry{02/2022 -- 04/2022}{Compiled Selection Predicates in the AvantGraph Database}{TU Eindhoven}{Eindhoven}{}{
@@ -120,6 +126,8 @@
     Final course grade 9/10.
 }
 
+\newpage
+
 \section{Honors}
 \cventry{06/2016 -- 09/2018}{Honors Program High Tech Systems}{TU Eindhoven}{Eindhoven}{}{
     Special program for the top 100 students of the university to take on an extra project next to their studies.
@@ -127,8 +135,6 @@
     At our industry partner Avular, I ported their position tracking system from Matlab to C++ and CUDA to run it locally on the drone, achieving a 4x speedup.
     Received the rare "Excellent" distinction for my efforts (highest awarded).
 }
-
-\newpage
 
 \section{Competences}
 \cvitem{Languages}{C/C++, Rust, Java, SQL, Python, \LaTeX, VHDL}
