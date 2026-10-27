@@ -19,8 +19,9 @@
 \familyname{de Graaf} % Your last name
 
 % All information in this block is optional, comment out any lines you don't need
-\address{Tongelresestraat 92A}{Eindhoven, Netherlands 5613 DN}
-\mobile{(+31) 6 232 571 62}
+\address{Eindhoven, Netherlands}
+%\address{Tongelresestraat 92A}{Eindhoven, Netherlands 5613 DN}
+%\mobile{(+31) 6 232 571 62}
 \email{daandegraaf9@gmail.com}
 \extrainfo{
     Homepage: \href{https://wildarch.dev}{wildarch.dev}\\
@@ -39,18 +40,20 @@
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 \section{Work}
-\cventry{2023 -- present}{PhD Candidate on Programmability of Graph Databases}{Eindhoven University of Technology}{Eindhoven}{}{
+\cventry{2023 -- present}{PhD Candidate on Programmability in Database Systems}{Eindhoven University of Technology}{Eindhoven}{}{
     My research focuses on efficient execution of user-defined graph algorithms in databases.
-    I have published in top tier Database venues such as ACM SIGMOD, VLDB and CIDR.
-    As part of the \href{https://scilake.eu/}{SciLake} project (Horizon Europe) I worked with researchers from different disciplines to help them write and execute their custom algorithms over massive graphs.
+    I have published in top-tier database conferences such as ACM SIGMOD, VLDB and CIDR.
     I built the query lowering pipeline for the \href{https://avantgraph.io}{AvantGraph} graph query engine, and implemented native support for user-defined algorithms.
+    As part of the \href{https://scilake.eu/}{SciLake} (Horizon Europe) project I worked with researchers from different disciplines to help them write and execute their custom algorithms over massive graphs.
     I have lectured on the topic of query processing on modern hardware, and supervised student projects on graph storage, in-database sorting and query compilation.
+    \textbf{Expected defence: June 2027.}
 }
 \cventry{2019 -- 2021}{Software Engineer}{Google LLC}{London}{}{
-    As part of the Display Ads Monetization team, developed the pipeline for calculation and disbursement of advertising revenue to AdSense and YouTube partners.
-    The system I personally designed and built processed well over 1 billion USD monthly.
+    As part of the Display Ads Monetization team I worked on the pipeline for calculation and disbursement of advertising revenue to AdSense and YouTube partners.
+    I led an effort to cut pipeline runtime six-fold to stay within its time budget.
+    Another system I personally designed and built processed well over 1 billion USD monthly.
     %In response to concerns about exceeding our time budget, I spearheaded an initiative to speed up our pipeline, and reduced execution time six-fold.
-    Next to my core responsibilities, I have also taught introductory classes to the Rust programming language and contributed to the \href{https://v8.dev/}{V8 JavaScript compiler} that powers Google Chrome.
+    Next to my core responsibilities, I also taught introductory classes on Rust and contributed to the \href{https://v8.dev/}{V8 JavaScript engine} that powers Google Chrome.
 }
 \cventry{2018 -- 2019}{Software Engineer}{Prodrive Technologies B.V.}{Eindhoven}{}{
     After 2 months as an Embedded Systems Engineer, I was selected for the newly created Developer Infrastructure team, 
@@ -58,26 +61,22 @@
 }
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%	PROJECTS SECTION
 %----------------------------------------------------------------------------------------
-
-\section{Education}
-\cventry{2021 -- 2023}{Computer Engineering MSc}{Delft University of Technology}{Delft}{Cum laude}{
-    Specializations in Compiler Construction, Data-Intensive Systems Engineering and Computer Architecture.
-    %Core courses on Computer Architecture, Processor Design and Heterogeneous Computing.
-    %Specialization courses in Compiler Construction, Distributed \& Concurrent Program Analysis, and Data-Intensive Systems Engineering.
-    %Some courses in Databases and Functional Programming taken at TU Eindhoven.
-    GPA: 9.0/10
+\section{Notable Projects}
+\cventry{2023 -- present}{The GraphAlg Language}{}{}{\href{https://wildarch.dev/graphalg/}{wildarch.dev/graphalg}}{
+    GraphAlg is a domain-specific programming language for graph algorithms that is designed to be integrated into existing database systems.
+    It is natively supported in the AvantGraph graph query engine, with additional backends available for the relational systems Umbra and DuckDB.
+    GraphAlg takes existing theoretical works, such as the formal MATLANG language for matrix manipulation, and turns these into practical extensions of real database systems, with a focus on achieving high performance through aggressive query optimization.
+    %More details can be found in the SIGMOD 2027 paper \emph{Algorithm Support for Graph Databases, Done Right}.
+    The GraphAlg compiler, as well as the online playground and tutorial, are open source software.
 }
-\cventry{2015 -- 2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Cum laude}{
-    Electives in Security, Artificial Intelligence and Computer Architecture. GPA: 8.55/10.0
+\cventry{05/08 2026}{Iteration in Relational Database Systems}{Technical University of Munich}{Munich}{}{
+    During a 3-month research visit at the chair for database systems I investigated how queries with loops can be represented, optimized and executed efficiently in a modern relational query engine.
+    I designed a highly flexible loop construct for SQL that subsumes multiple existing proposals, yet is simple enough to be implemented with minimal engine changes.
+    The prototype, implemented in the Umbra database system, outperformed competing relational, graph-native and Datalog systems on both graph analytics and Datalog workloads.
+    This work was the basis for a CIDR publication, and is now available in standard Umbra releases.
 }
-
-%\cventry{2009 -- 2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{
-%    Secondary education in preparation for academic studies, including ancient Greek and advanced calculus. GPA: 8.36/10.0
-%}
-
-\section{Selected Publications}
 %\cventry{02/2023 -- 08/2023}{MSc Thesis: Efficient Processing of User-Provided Graph Algorithms in a Graph Database}{TU Delft / \mbox{TU Eindhoven}}{Delft}{\href{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}}{
 %    In this joint project between TU Delft and TU Eindhoven, I researched how to design a user-friendly programming language for expressing graph algorithms that can be compiled and executed efficiently inside the \href{https://avantgraph.io/}{AvantGraph Database}.
 %    I developed the compiler for this language, which optimizes and transforms imperative programs into a query operator graph.
@@ -103,6 +102,32 @@
 %    Final course grade 9/10.
 %}
 
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Selected Publications}
+\cventry{CIDR 2027}{Running Loops around Recursive SQL \emph{(to appear)}}{}{}{}{
+    \textbf{Daan de Graaf}, Altan Birler, Nikolay Yakovets, Thomas Neumann\\
+    A loop operator for SQL to cleanly and efficiently express graph algorithms and Datalog programs.
+    %This work was done during a a 3-month research visit at the TU Munich Chair for Database Systems.
+}
+\cventry{SIGMOD 2027}{Algorithm Support for Graph Databases, Done Right \emph{(to appear)}}{}{}{}{
+    \textbf{Daan de Graaf}, Robert Brijder, Soham Chakraborty, George Fletcher, Bram van de Wall, Nikolay Yakovets\\
+    Introduces GraphAlg, a domain-specific language for graph algorithms, designed to be integrated into database systems.
+}
+% \cventry{ArXiv 2026}{\href{https://arxiv.org/abs/2604.11454}{Foundations of the GraphAlg Language}}{}{}{}{
+%     \textbf{Daan de Graaf}, Robert Brijder, Nikolay Yakovets
+% }
+\cventry{VLDB 2026}{GraphAlg Playground: An Online Platform for Learning and Experimenting with the GraphAlg Language}{}{}{}{
+    \textbf{Daan de Graaf}, Robert Brijder, Soham Chakraborty, George Fletcher, Bram van de Wall, Nikolay Yakovets\\
+    Demonstration of an online playground and tutorial for the GraphAlg language.
+}
+\cventry{\mbox{OOPSLA 2023}}{Randomized Testing of Byzantine Fault Tolerant Algorithms \emph{(ACM SIGPLAN Distinguished Paper award)}}{}{}{}{
+    Levin N. Winter, Florena Buse, \textbf{Daan de Graaf}, Klaus von Gleissenthall, Burcu Kulahcioglu Ozkan\\
+    A simple yet effective method for finding bugs in byzantine fault tolerant algorithms through fuzzing.
+}
+
 %\newpage
 
 % \section{Honors}
@@ -112,6 +137,28 @@
 %     At our industry partner Avular, I ported their position tracking system from Matlab to C++ and CUDA to run it locally on the drone, achieving a 4x speedup.
 %     Received the rare "Excellent" distinction for my efforts (highest awarded).
 % }
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\cventry{2021 -- 2023}{Computer Engineering MSc}{Delft University of Technology}{Delft}{Cum laude}{
+    Specializations in Compiler Construction, Data-Intensive Systems Engineering and Computer Architecture.
+    %Core courses on Computer Architecture, Processor Design and Heterogeneous Computing.
+    %Specialization courses in Compiler Construction, Distributed \& Concurrent Program Analysis, and Data-Intensive Systems Engineering.
+    %Some courses in Databases and Functional Programming taken at TU Eindhoven.
+    Thesis: \emph{Efficient Processing of User-Provided Graph Algorithms in a Graph Database}. 
+    The initial prototype of GraphAlg was developed during the thesis.
+    GPA: 9.0/10
+}
+\cventry{2015 -- 2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Cum laude}{
+    Electives in Security, Artificial Intelligence and Computer Architecture. GPA: 8.55/10.0
+}
+
+%\cventry{2009 -- 2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{
+%    Secondary education in preparation for academic studies, including ancient Greek and advanced calculus. GPA: 8.36/10.0
+%}
 
 \section{Competences}
 \cvitem{Expertise}{
@@ -145,19 +192,20 @@
     \hspace{2.4cm}
     \textbf{Dutch:} Native speaker
     \hspace{0.4cm}
-    \textbf{English:} Advanced
+    \textbf{English:} Fluent
     \hspace{0.4cm}
     \textbf{Chinese:} HSK1
 \end{small}
 
 \section{Volunteering}
+\cventry{2024 -- present}{Reviewer}{VLDB Journal}{}{}{}
 \cventry{2017 -- 2018}{Chairman}{Scala}{Eindhoven}{\href{https://studentencultuur.nl}{studentencultuur.nl}}{
-    Represent a collective of 9 cultural student associations with over 1000 members.
+    Represented a collective of 9 cultural student associations with over 1000 members.
     %Tasks include organizing large events, policy-making and negotiating board grant agreements.
 }
 
 \cventry{2016 -- 2017}{President}{AEGEE-Eindhoven}{Eindhoven}{\href{https://aegee.org}{aegee.org}}{
-    Represent the Eindhoven branch of the AEGEE student association both locally and internationally.
+    Represented the Eindhoven branch of the AEGEE student association both locally and internationally.
     %Main event organizer, and coordinator for the move to a new building.
 }
 
@@ -166,10 +214,10 @@
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 \section{Interests}
-\cvitem{Non-Western culture}{
-    I am interested in how different cultural backgrounds shape people's lives and opinions.
-    In recent years I have traveled to Turkey, Moldova, Azerbaijan, Vietnam and Hong Kong, and I hope to visit mainland China soon.
-}
+%\cvitem{Non-Western culture}{
+%    I am interested in how different cultural backgrounds shape people's lives and opinions.
+%    In recent years I have traveled to Turkey, Moldova, Azerbaijan, Vietnam and Hong Kong, and I hope to visit mainland China soon.
+%}
 
 \cvitem{Cooking}{
     I enjoy trying out new recipes and learning the science behind cooking to make better food.
@@ -178,8 +226,7 @@
 }
 
 \cvitem{Climbing}{
-    I like bouldering and top-rope climbing.
-    I hope to try outdoor lead climbing in the future.
+    I enjoy bouldering and sport climbing, both indoors and outdoors.
 }
 
 \end{document}
