@@ -1,24 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -40,14 +19,9 @@
 \familyname{de Graaf} % Your last name
 
 % All information in this block is optional, comment out any lines you don't need
-%\title{Curriculum Vitae}
 \address{Tongelresestraat 92A}{Eindhoven, Netherlands 5613 DN}
 \mobile{(+31) 6 232 571 62}
-%\phone{(000) 111 1112}
-%\fax{(000) 111 1113}
 \email{daandegraaf9@gmail.com}
-%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is %the url for the clickable link, the second argument is the url displayed in the %template - this allows special characters to be displayed such as the tilde in this %example
-%\homepage{https://wildarch.dev}{wildarch.dev}
 \extrainfo{
     Homepage: \href{https://wildarch.dev}{wildarch.dev}\\
     Github: \href{https://github.com/wildarch}{wildarch}\\
@@ -61,86 +35,88 @@
 
 \makecvtitle % Print the CV title
 
+%---------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\section{Work}
+\cventry{2023 -- present}{PhD Candidate on Programmability of Graph Databases}{Eindhoven University of Technology}{Eindhoven}{}{
+    My research focuses on efficient execution of user-defined graph algorithms in databases.
+    I have published in top tier Database venues such as ACM SIGMOD, VLDB and CIDR.
+    As part of the \href{https://scilake.eu/}{SciLake} project (Horizon Europe) I worked with researchers from different disciplines to help them write and execute their custom algorithms over massive graphs.
+    I built the query lowering pipeline for the \href{https://avantgraph.io}{AvantGraph} graph query engine, and implemented native support for user-defined algorithms.
+    I have lectured on the topic of query processing on modern hardware, and supervised student projects on graph storage, in-database sorting and query compilation.
+}
+\cventry{2019 -- 2021}{Software Engineer}{Google LLC}{London}{}{
+    As part of the Display Ads Monetization team, developed the pipeline for calculation and disbursement of advertising revenue to AdSense and YouTube partners.
+    The system I personally designed and built processed well over 1 billion USD monthly.
+    %In response to concerns about exceeding our time budget, I spearheaded an initiative to speed up our pipeline, and reduced execution time six-fold.
+    Next to my core responsibilities, I have also taught introductory classes to the Rust programming language and contributed to the \href{https://v8.dev/}{V8 JavaScript compiler} that powers Google Chrome.
+}
+\cventry{2018 -- 2019}{Software Engineer}{Prodrive Technologies B.V.}{Eindhoven}{}{
+    After 2 months as an Embedded Systems Engineer, I was selected for the newly created Developer Infrastructure team, 
+    where I worked with teams across the company to improve the reliability of their products and increase developer productivity.
+}
+
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Education}
-\cventry{09/2021 -- 08/2023}{Computer Engineering MSc}{Delft University of Technology}{Delft}{Cum laude}{
-    Core courses on Computer Architecture, Processor Design and Heterogeneous Computing.
-    Specialization courses in Compiler Construction, Distributed \& Concurrent Program Analysis, and Data-Intensive Systems Engineering.
-    Some courses in Databases and Functional Programming taken at TU Eindhoven.
+\cventry{2021 -- 2023}{Computer Engineering MSc}{Delft University of Technology}{Delft}{Cum laude}{
+    Specializations in Compiler Construction, Data-Intensive Systems Engineering and Computer Architecture.
+    %Core courses on Computer Architecture, Processor Design and Heterogeneous Computing.
+    %Specialization courses in Compiler Construction, Distributed \& Concurrent Program Analysis, and Data-Intensive Systems Engineering.
+    %Some courses in Databases and Functional Programming taken at TU Eindhoven.
     GPA: 9.0/10
 }
-\cventry{09/2015 -- 07/2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Cum laude}{
-    Computer Science bachelor with electives in Security, Artificial Intelligence and Computer Architecture. GPA: 8.55/10.0
+\cventry{2015 -- 2018}{Computer Science BSc}{Eindhoven University of Technology}{Eindhoven}{Cum laude}{
+    Electives in Security, Artificial Intelligence and Computer Architecture. GPA: 8.55/10.0
 }
 
-\cventry{09/2009 -- 06/2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{
-    Secondary education in preparation for academic studies, including ancient Greek and advanced calculus. GPA: 8.36/10.0
-}
+%\cventry{2009 -- 2015}{Pre University Education}{Gymnasium Camphusianum}{Gorinchem}{Cum laude}{
+%    Secondary education in preparation for academic studies, including ancient Greek and advanced calculus. GPA: 8.36/10.0
+%}
 
-%---------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-\section{Work}
-\cventry{06/2023 -- present}{PhD Candidate on Programmability of Graph Databases}{Eindhoven University of Technology}{Eindhoven}{\href{https://research.tue.nl/en/persons/daan-de-graaf}{https://research.tue.nl/en/persons/daan-de-graaf}}{
-    My research currently focuses on support for user-defined graph algorithms in graph databases.
-    I am developing Graphalg, a domain-specific language for writing graph algorithms in the language of linear algebra that is both easy to use and highly optimizable.
-    Fully integrated into the AvantGraph database, it enables graph databases to become platforms for efficient large-scale data analysis.
-}
-\cventry{09/2019 -- 07/2021}{Software Engineer}{Google LLC}{London}{}{
-    As part of the Display Ads Monetization team, developed the pipeline for calculation and disbursement of advertising revenue to AdSense and YouTube partners.
-    The system I personally designed and built processed well over 1 billion USD monthly, and was a mission-critical part of the pipeline.
-    In response to concerns about exceeding our time budget, I spearheaded an initiative to speed up our pipeline, and reduced execution time six-fold.
-    Next to my core responsibilities, I have also taught introductory classes to the \href{https://www.rust-lang.org/}{Rust programming language} and contributed to the \href{https://v8.dev/}{V8 JavaScript compiler} that powers Google Chrome.
-}
-\cventry{09/2018 -- 05/2019}{Designer}{Prodrive Technologies B.V.}{Eindhoven}{\href{https://prodrive-technologies.com}{prodrive-technologies.com}}{
-    After 2 months as an Embedded Systems Engineer, I switched to the newly created Developer Infrastructure team to assess the viability of the Rust programming language for use at Prodrive.
-    I helped various teams in the Embedded and Networking domains to improve the reliability of their products and increase developer productivity.
-}
+\section{Selected Publications}
+%\cventry{02/2023 -- 08/2023}{MSc Thesis: Efficient Processing of User-Provided Graph Algorithms in a Graph Database}{TU Delft / \mbox{TU Eindhoven}}{Delft}{\href{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}}{
+%    In this joint project between TU Delft and TU Eindhoven, I researched how to design a user-friendly programming language for expressing graph algorithms that can be compiled and executed efficiently inside the \href{https://avantgraph.io/}{AvantGraph Database}.
+%    I developed the compiler for this language, which optimizes and transforms imperative programs into a query operator graph.
+%    My thesis project allows the embedding of graph algorithms directly into graph queries, which can then be holistically optimized and executed.
+%}
+%\cventry{11/2022 -- 02/2023}{Superg}{TU Eindhoven}{Eindhoven}{\href{https://github.com/wildarch/superg}{github.com/wildarch/superg}}{
+%    Built modern equivalents of the \href{http://miranda.org.uk/}{Miranda} and \href{https://users.ece.cmu.edu/~koopman/tigre/index.html}{TIGRE} execution engines for functional programming languages.
+%    Thanks to the use of a recently-proposed compilation algorithm, the worst-case performance is exponentially better than previous Combinator Reduction Engines.
+%    We show that while TIGRE outperformed Miranda significantly at the time of publication, on modern x86 CPUs it suffers from frequent cache invalidation, and is not a good choice anymore.
+%    Final course grade 10/10.
+%}
 
-\section{Notable Projects}
-\cventry{02/2023 -- 08/2023}{MSc Thesis: Efficient Processing of User-Provided Graph Algorithms in a Graph Database}{TU Delft / \mbox{TU Eindhoven}}{Delft}{\href{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}{http://resolver.tudelft.nl/uuid:1b5f0236-87f2-41f0-8af8-0911cb3b4d54}}{
-    In this joint project between TU Delft and TU Eindhoven, I researched how to design a user-friendly programming language for expressing graph algorithms that can be compiled and executed efficiently inside the \href{https://avantgraph.io/}{AvantGraph Database}.
-    I developed the compiler for this language, which optimizes and transforms imperative programs into a query operator graph.
-    My thesis project allows the embedding of graph algorithms directly into graph queries, which can then be holistically optimized and executed.
-}
-\cventry{11/2022 -- 02/2023}{Superg}{TU Eindhoven}{Eindhoven}{\href{https://github.com/wildarch/superg}{github.com/wildarch/superg}}{
-    Built modern equivalents of the \href{http://miranda.org.uk/}{Miranda} and \href{https://users.ece.cmu.edu/~koopman/tigre/index.html}{TIGRE} execution engines for functional programming languages.
-    Thanks to the use of a recently-proposed compilation algorithm, the worst-case performance is exponentially better than previous Combinator Reduction Engines.
-    We show that while TIGRE outperformed Miranda significantly at the time of publication, on modern x86 CPUs it suffers from frequent cache invalidation, and is not a good choice anymore.
-    Final course grade 10/10.
-}
+%\cventry{04/2022 -- 02/2023}{ByzzFuzz}{TU Delft}{Delft}{\href{https://doi.org/10.1145/3586053}{doi.org/10.1145/3586053}}{
+%    Designed a fuzz testing harness for the Tendermint blockchain.
+%    I demonstrated a mismatch between the consensus protocol and message delivery subsystem, which can cause clusters to deadlock if certain messages are dropped.
+%    Our work received the ACM SIGPLAN Distinguished Paper award at \href{https://2023.splashcon.org/details/splash-2023-oopsla/27/Randomized-Testing-of-Byzantine-Fault-Tolerant-Algorithms}{OOPSLA 2023}.
+%}
 
-\cventry{04/2022 -- 02/2023}{ByzzFuzz}{TU Delft}{Delft}{\href{https://doi.org/10.1145/3586053}{doi.org/10.1145/3586053}}{
-    Designed a fuzz testing harness for the Tendermint blockchain.
-    I demonstrated a mismatch between the consensus protocol and message delivery subsystem, which can cause clusters to deadlock if certain messages are dropped.
-    Our work received the ACM SIGPLAN Distinguished Paper award at \href{https://2023.splashcon.org/details/splash-2023-oopsla/27/Randomized-Testing-of-Byzantine-Fault-Tolerant-Algorithms}{OOPSLA 2023}.
-}
+%\cventry{02/2022 -- 04/2022}{Compiled Selection Predicates in the AvantGraph Database}{TU Eindhoven}{Eindhoven}{}{
+%    Designed a Just-in-time compilation scheme for the AvantGraph database that combines performance with maintainability.
+%    The JIT compiler, based on LLVM, accepts ordinary C++ functions and applies runtime specialization to reduce branching and pointer indirection.
+%    I implemented selection predicate compilation using the JIT and demonstrated performance improvements in multiple queries from the \href{https://github.com/ldbc/lsqb}{LSQB} benchmark.
+%    Final course grade 9/10.
+%}
 
-\cventry{02/2022 -- 04/2022}{Compiled Selection Predicates in the AvantGraph Database}{TU Eindhoven}{Eindhoven}{}{
-    Designed a Just-in-time compilation scheme for the AvantGraph database that combines performance with maintainability.
-    The JIT compiler, based on LLVM, accepts ordinary C++ functions and applies runtime specialization to reduce branching and pointer indirection.
-    I implemented selection predicate compilation using the JIT and demonstrated performance improvements in multiple queries from the \href{https://github.com/ldbc/lsqb}{LSQB} benchmark.
-    Final course grade 9/10.
-}
+%\newpage
 
-\newpage
-
-\section{Honors}
-\cventry{06/2016 -- 09/2018}{Honors Program High Tech Systems}{TU Eindhoven}{Eindhoven}{}{
-    Special program for the top 100 students of the university to take on an extra project next to their studies.
-    Built a low-latency drone position-tracking system based on image recognition.
-    At our industry partner Avular, I ported their position tracking system from Matlab to C++ and CUDA to run it locally on the drone, achieving a 4x speedup.
-    Received the rare "Excellent" distinction for my efforts (highest awarded).
-}
+% \section{Honors}
+% \cventry{06/2016 -- 09/2018}{Honors Program High Tech Systems}{TU Eindhoven}{Eindhoven}{}{
+%     Special program for the top 100 students of the university to take on an extra project next to their studies.
+%     Built a low-latency drone position-tracking system based on image recognition.
+%     At our industry partner Avular, I ported their position tracking system from Matlab to C++ and CUDA to run it locally on the drone, achieving a 4x speedup.
+%     Received the rare "Excellent" distinction for my efforts (highest awarded).
+% }
 
 \section{Competences}
-\cvitem{Languages}{C/C++, Rust, Java, SQL, Python, \LaTeX, VHDL}
-\cvitem{Tech. skills}{
-    Compiler design,
-    Engineering data-intensive systems,
+\cvitem{Expertise}{
+    Query processing,
+    Compiler construction,
     Performance engineering,
     Large-scale software development
 }
@@ -149,16 +125,17 @@
     Public speaking,
     Project management
 }
+%\cvitem{Languages}{C/C++, Rust, Java, SQL, Python, \LaTeX}
 
-\cvitem{Technologies}{
-    Linux,
-    LLVM,
-    ANTLR,
-    Vim,
-    Bazel,
-    NVIDIA CUDA,
-    Docker
-}
+% \cvitem{Technologies}{
+%     Linux,
+%     LLVM/MLIR,
+%     ANTLR,
+%     Vim,
+%     Bazel,
+%     NVIDIA CUDA,
+%     Docker
+% }
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
@@ -169,17 +146,19 @@
     \textbf{Dutch:} Native speaker
     \hspace{0.4cm}
     \textbf{English:} Advanced
+    \hspace{0.4cm}
+    \textbf{Chinese:} HSK1
 \end{small}
 
-\section{Board experience}
-\cventry{06/2017 -- 09/2018}{Chairman}{Scala}{Eindhoven}{\href{https://studentencultuur.nl}{studentencultuur.nl}}{
+\section{Volunteering}
+\cventry{2017 -- 2018}{Chairman}{Scala}{Eindhoven}{\href{https://studentencultuur.nl}{studentencultuur.nl}}{
     Represent a collective of 9 cultural student associations with over 1000 members.
-    Tasks include organizing large events, policy-making and negotiating board grant agreements.
+    %Tasks include organizing large events, policy-making and negotiating board grant agreements.
 }
 
-\cventry{09/2016 11/2017}{President}{AEGEE-Eindhoven}{Eindhoven}{\href{https://aegee.org}{aegee.org}}{
-    Represent the local AEGEE antenna both locally and internationally.
-    Main event organizer, and coordinator for the move to a new building.
+\cventry{2016 -- 2017}{President}{AEGEE-Eindhoven}{Eindhoven}{\href{https://aegee.org}{aegee.org}}{
+    Represent the Eindhoven branch of the AEGEE student association both locally and internationally.
+    %Main event organizer, and coordinator for the move to a new building.
 }
 
 
